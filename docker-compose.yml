@@ -3,6 +3,7 @@ services:
   nginx:
     image: nginx:1.15-alpine
     volumes:
+      - ./data/app:/var/www/html
       - ./data/nginx:/etc/nginx/conf.d
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
